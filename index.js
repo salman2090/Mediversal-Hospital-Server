@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const cors = require('cors');
-
+require('dotenv').config();
 
 const MongoClient = require("mongodb").MongoClient;
 const ObjectId = require("mongodb").ObjectId;
@@ -50,7 +50,7 @@ async function run() {
     }
 }
  
-
+run().catch(console.dir);
 
 app.get('/', (req, res) => {
     res.send('Hello Mediversal Hospital!')
